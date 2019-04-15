@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const bookSchema = new Schema(
@@ -12,7 +12,7 @@ const bookSchema = new Schema(
     author: [
       {
         type: Schema.Types.ObjectId,
-        ref: 'Author'
+        ref: "Author"
       }
     ],
     rating: {
@@ -21,12 +21,12 @@ const bookSchema = new Schema(
   },
   {
     timestamps: {
-      createdAt: 'created_at',
-      updatedAt: 'updated_at'
+      createdAt: "created_at",
+      updatedAt: "updated_at"
     }
   }
 );
 
-const Book = mongoose.model('Book', bookSchema);
+const Book = mongoose.model("Book", bookSchema);
 
 module.exports = Book;
